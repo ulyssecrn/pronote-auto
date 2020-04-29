@@ -7,7 +7,7 @@ Python script using Selenium to automatically file an iDevoir on Pronote, a web 
 ```
 pip install selenium
 ```
-2. Then, edit `pronote-auto.py` and add your username and password to the variables `id` and `pwd`
+2. Then, edit `credentials.py` and add your username and password to the variables `user` and `pwd`
 3. Run `pronote-auto.py` and profit !
 
 ## Misc
