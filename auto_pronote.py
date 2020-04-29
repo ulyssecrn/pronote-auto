@@ -17,8 +17,8 @@ def load_wait(element_id):
 
 # check whether credentials are filled
 if user != '' and pwd != '':
-    # launch chrome
-    driver = webdriver.Chrome()
+    # launch browser
+    driver = webdriver.Safari()
     driver.get('https://0782562l.index-education.net/pronote/eleve.html?login=true&fd=1')
     time.sleep(2)
 
