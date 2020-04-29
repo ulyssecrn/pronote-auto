@@ -8,7 +8,7 @@ Script Python utitilisant Selenium pour automatiquement remplir un iDevoir sur P
 ```
 pip install selenium
 ```
-2. Installer Google Chrome, et [chromedriver](https://chromedriver.chromium.org/home). Vous pouvez utiliser n'importe quel autre navigateur en éditant la ligne `driver = webdriver.Chrome()` et en utilisant le driver approprié. Plus d'info [ici](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/).
+2. Ce script utilise Safari comme navigateur par défaut. Vous pouvez utiliser n'importe quel autre navigateur en éditant la ligne `driver = webdriver.Chrome()` et en utilisant le driver approprié. Plus d'info [ici](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/).
 3. Ensuite, éditer `credentials.py` en y ajoutant votre identifiant et votre mot de passes aux variables respectives `user` et `pwd`.
 4. Lancer `pronote-auto.py` et profiter !
 
