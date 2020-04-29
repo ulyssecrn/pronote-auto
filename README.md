@@ -8,7 +8,7 @@ Python script using Selenium to automatically file an iDevoir on Pronote, a web 
 ```
 pip install selenium
 ```
-2. You need to have Google Chrome installed, and [chromedriver](https://chromedriver.chromium.org/home). You can use any other browser by editing the `driver = webdriver.Chrome()` line and using a chosen driver. More info [here](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/).
+2. This script uses Safari as a browser by default. You can use any other browser by editing the `driver = webdriver.Safari()` line and using a chosen driver. More info [here](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/).
 3. Then, edit `credentials.py` and add your username and password to the variables `user` and `pwd`.
 4. Run `pronote-auto.py` and profit !
 
