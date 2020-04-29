@@ -1,6 +1,6 @@
 # pronote-auto
 ## Description
-Script Python utitlisant Selenium pour automatiquement remplir un iDevoir sur Pronote, une interface web utilisée par des millions de lycées en France. Dans mon cas, il remplit un iDevoir très simple utilisé par un professeur pour faire l'appel.
+Script Python utitilisant Selenium pour automatiquement remplir un iDevoir sur Pronote, une interface web utilisée par des millions de lycées en France. Dans mon cas, il remplit un iDevoir très simple utilisé par un professeur pour faire l'appel.
 
 *English version [here](https://github.com/ulyssecrn/pronote-auto).*
 ## Utilisation
