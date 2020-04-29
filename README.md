@@ -1,2 +1,14 @@
 # pronote-auto
-Python script using Selenium to automatically file an iDevoir
+## Description
+Python script using Selenium to automatically file an iDevoir on Pronote, a web interface used by millions of high-schools in France. In my case, it fills a very simple iDevoir (=i-"assignement" in french) used by a teacher to take the register.
+
+## Usage
+1. You need to have the Selenium library installed :
+```
+pip install selenium
+```
+2. Then, edit `pronote-auto.py` and add your username and password to the variables `id` and `pwd`
+3. Run `pronote-auto.py` and profit !
+
+## Misc
+This script becomes useful when you program it to launch automatically at a certain time so you don't have to do anything.
