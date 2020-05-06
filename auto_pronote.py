@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 from playsound import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
-from credentials import *
+from settings import *
 
 
 def load_wait_by_xpath(element_xpath):
@@ -17,7 +18,10 @@ def load_wait_by_xpath(element_xpath):
 
 
 if user != '' and pwd != '':
-    # launch browser
+    while not datetime.now().time().minute == hour or not datetime.now().time().hour == minute:
+        print('Waiting for the right time.', end="\r", flush=True)
+        time.sleep(60)
+
     driver = webdriver.Chrome()
     driver.get('https://0782562l.index-education.net/pronote/eleve.html?login=true&fd=1')
     load_wait_by_xpath('//*[@title="Saisissez votre identifiant."]')
@@ -27,16 +31,19 @@ if user != '' and pwd != '':
     driver.find_element_by_xpath('//*[contains(text(), "Se connecter")]').click()
     load_wait_by_xpath('//*[@id="GInterface.Instances[1]_colonne_2"]')
     success = False
-    attempts = 0
-    while attempts < 7:
+    attempts = 1
+    while attempts < 8:
+        driver.refresh()
         try:
             idevoir = driver.find_element_by_xpath(
                 "//*[contains(text(),'Appel')]//preceding-sibling::div[contains(text("
                 "),'PHYSIQUE-CHIMIE > TP/TD')]")
         except NoSuchElementException:
-            print("iDevoir not found !")
+            print("iDevoir not found ! Attempt number "+str(attempts)+".")
+            for i in range(0, 120):
+                print("Trying again in "+str(120-i)+" seconds...", end="\r", flush=True)
+                time.sleep(1)
             attempts += 1
-            time.sleep(120)
         else:
             print("iDevoir found !")
             attempts = 8
@@ -59,4 +66,5 @@ if user != '' and pwd != '':
     while not success:
         playsound('alarm.mp3')
 else:
-    print("Add your username and password to credentials.py first !")
+    print("Add your username and password to settings.py first !")
+
