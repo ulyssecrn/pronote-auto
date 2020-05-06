@@ -13,4 +13,4 @@ pip install selenium
 4. Run `pronote-auto.py` and profit !
 
 ## Misc
-This script becomes useful when you program it to launch automatically at a certain time so you don't have to do anything.
+`alarm.mp3` credit of Daniel Simion under Attribution 3.0 license.
